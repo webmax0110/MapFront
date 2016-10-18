@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+  <div class="row">
+    <div id="map" map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyBOwF3AZoD5SCZoh9s3fk_Z0sg4P2IOBRE"
+         map-lazy-load-params="{{googleMapsUrl}}">
+      <ng-map default-style="false" zoom="2" center="[45.518970, -122.672899]">
+        <marker ng-repeat="address in vm.addresses" position="address.name" title="address.name"></marker>
+      </ng-map>
+    </div>
+  </div>
+  <div class="row">
+    <div class="center-block">
+      <form class="form-inline">
+        <div class="form-group"> 
+          <label class="sr-only">Email</label> 
+          <p class="form-control-static">email@example.com</p> 
+        </div> 
+        <div class="form-group"> 
+          <label for="location" class="sr-only">Location</label> 
+          <input class="form-control" id="location" placeholder="Location" type="text" ng-model="vm.location" /> 
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="vm.addlocation(vm.location)">Add Location</button> 
+      </form>
+    </div>
+  </div>
+</div>

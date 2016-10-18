@@ -1,0 +1,18 @@
+<nav class="navbar navbar-static-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <ul class="nav navbar-nav">
+        <li ng-class="{active: vm.isActive('/')}"><a ng-href="#">Home</a></li>
+        
+        <li ng-class="{active: vm.isActive('/map')}"><a ng-href="#/map">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ng-href="#/login" ng-show="!vm.loggedin"><span class="glyphicon glyphicon-log-in"></span> Login</a></a></li>
+        <li><a ng-href="#/logout" ng-show="vm.loggedin"><span class="glyphicon glyphicon-log-out"></span> Logout</a></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
