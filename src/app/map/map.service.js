@@ -24,8 +24,8 @@
         location:address
       })
       .success(function (response) {
-        deferred.resolve(data);
-        callback (response.data);
+        deferred.resolve(response);
+        callback (response);
       })
       .error(function(err) {
         deferred.reject(err);

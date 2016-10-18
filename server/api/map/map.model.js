@@ -5,7 +5,8 @@ var mongoose = require('mongoose'),
 
 var MapsSchema = new Schema({
   userId: {type: String}, 
-  location: {type: String}
+  location: {type: String},
+  description: {type: String}
 });
 
 /**

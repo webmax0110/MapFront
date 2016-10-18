@@ -13,22 +13,11 @@ var handleError = function(res, err) {
 
 // Get list of locations
 exports.index = function(req, res) {
-  if (req.user.role == "admin")
-  {
-    Maps.find({}, function (err, locations) {
-      if(err) { return handleError(res, err); }
+  Maps.find({}, function (err, locations) {
+    if(err) { return handleError(res, err); }
 
-      return res.status(200).json(locations);
-    });
-  }
-  else
-  {
-    Maps.find({ userId: req.user.id }, function (err, locations) {
-      if(err) { return handleError(res, err); }
-
-      return res.status(200).json(locations);
-    });
-  }
+    return res.status(200).json(locations);
+  });
 };
 
 // Get a single locations

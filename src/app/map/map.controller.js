@@ -17,13 +17,12 @@
     }
     vm.addlocation = function(location){
       MapService.post(location, function(data){
-        NgMap.getMap().then(function(map) {
-        });
+        vm.addresses.push(data);
       });
     };
-    $scope.addresses = MapService.get(function(data){
-      NgMap.getMap().then(function(map) {
-      });
+    MapService.get(function(data){
+      console.log(data);
+      vm.addresses = data;
     });
     // NgMap.getMap().then(function(map) {
     // });
