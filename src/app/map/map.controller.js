@@ -21,7 +21,6 @@
       });
     };
     MapService.get(function(data){
-      console.log(data);
       vm.addresses = data;
     });
     // NgMap.getMap().then(function(map) {

@@ -25,9 +25,27 @@
   }
 
   /** @ngInject */
-  function NavbarController(moment, Auth, $location) {
+  function NavbarController($rootScope, moment, Auth, $location, $cookies, nav_menu, $log) {
     var vm = this;
-    vm.loggedin = Auth.isAuthenticated();
+    var scope = $rootScope;
+    scope.$watch(function() { 
+      return $cookies.get('user_info'); 
+    }, function(newValue) {
+      vm.loggedin = Auth.isAuthenticated();
+      vm.nav_menu = nav_menu;
+      vm.access_level = 0;
+      var current_role = Auth.getRole();
+      switch (current_role) {
+        case 'admin':
+          vm.access_level = 2;
+          break;
+        case 'manager':
+          vm.access_level = 1;
+          break;
+      }
+    });
+    
+
     vm.isActive = function(url) {
       return url === $location.path();
     };

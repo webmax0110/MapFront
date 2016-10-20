@@ -11,7 +11,7 @@
     vm.login_error = false;
     if ($state.current.name == 'logout') {
       Auth.logout().then(function(){
-        $state.go(Auth.defaultState());
+        $state.go('login');
       });
     }
     if (Auth.isAuthenticated()) {

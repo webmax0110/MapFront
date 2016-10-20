@@ -32,6 +32,18 @@
         templateUrl: 'app/map/map.html',
         controller: 'MapController',
         controllerAs: 'vm'
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutController',
+        controllerAs: 'vm'
+      })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'app/profile/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');

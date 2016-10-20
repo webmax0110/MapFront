@@ -45,7 +45,7 @@ exports.show = function(req, res) {
 // Creates a new location in the DB
 exports.create = function(req, res) {
   var newNote = new Maps(req.body);
-  if (req.user.role != "admin") newNote.userId = req.user.id;
+  if (req.user.role == "admin") newNote.userId = req.user.id;
   if (!newNote.userId) return res.sendStatus(422);
 
   Maps.create(newNote, function(err, location) {

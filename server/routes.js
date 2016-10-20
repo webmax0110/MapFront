@@ -7,9 +7,6 @@
 var errors = require('./components/errors');
 
 module.exports = function(app) {
-  app.use(function(req, res, next) {
-    next();
-  });
   // Insert routes
   app.use('/auth', require('./auth'));
   app.use('/api/users', require('./api/user'));

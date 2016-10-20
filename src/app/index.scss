@@ -27,7 +27,20 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   }
 }
 
+body {
+  background-color :#ccc;
+}
+
 .container {
+  border:1px solid #efefef;
+  background-color : #fff;
+  padding:0px;
+
+  .wrapper {
+    padding : 10px;
+    min-height:80vh;
+  }
+
   #map {
     width : 100%;
   }

@@ -1,9 +1,6 @@
-<div class="container">
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
-  </div>
-
-  <div class="row">
+<div class="breadcrumb"><h3 class="text-center">Address</h3></div>
+<div class="row">
+  <div class="col-md-12">
     <div id="map" map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyBOwF3AZoD5SCZoh9s3fk_Z0sg4P2IOBRE"
          map-lazy-load-params="{{googleMapsUrl}}">
       <ng-map default-style="false" zoom="2" center="[45.518970, -122.672899]" refresh="refreshMap">
@@ -11,21 +8,22 @@
       </ng-map>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-4">
+</div>
+<div class="row">
+  <div class="col-md-offset-4 col-md-4">
 
-      <form class="form">
-        <h3 class="form-signin-heading text-center">Add A Place</h3>
-        <div class="form-group"> 
-          <label for="location" class="sr-only">Location</label> 
-          <input class="form-control" id="location" placeholder="Location" type="text" ng-required="Location" ng-model="vm.location" /> 
-        </div>
-        <div class="form-group"> 
-          <label for="description" class="sr-only">Description</label> 
-          <textarea class="form-control" id="location" placeholder="Location" ng-model="vm.description"> </textarea>
-        </div>
-        <button type="submit" class="btn btn-default" ng-click="vm.addlocation(vm.location)">Add Location</button> 
-      </form>
-    </div>
+    <form class="form">
+      <h3 class="form-signin-heading text-center">Add A Place</h3>
+      <div class="form-group"> 
+        <label for="location" class="sr-only">Location</label> 
+        <input class="form-control" id="location" placeholder="Location" type="text" ng-required="Location" ng-model="vm.location" /> 
+      </div>
+      <div class="form-group"> 
+        <label for="description" class="sr-only">Description</label> 
+        <textarea class="form-control" id="location" placeholder="Location" ng-model="vm.description"> </textarea>
+      </div>
+      <button type="submit" class="btn btn-default" ng-click="vm.addlocation(vm.location)">Add Location</button> 
+    </form>
   </div>
 </div>
+
