@@ -36,22 +36,40 @@
     })
     .constant('mainSlider', {
         image1 : {
-            src:'img00.jpg'
+            src:'/assets/sliders/img00.jpg',
+            slides: {
+                p : "Lorem ipsum dolor sit amet"
+            }
         },
         image2 : {
-            src:'img01.jpg'
+            src:'/assets/sliders/img01.jpg',
+            slides: {
+                p : "Lorem ipsum dolor sit amet"
+            }
         },
         image3 : {
-            src:'img02.jpg'
+            src:'/assets/sliders/img02.jpg',
+            slides: {
+                p : "Lorem ipsum dolor sit amet"
+            }
         },
         image4 : {
-            src:'img03.jpg'
+            src:'/assets/sliders/img03.jpg',
+            slides: {
+                p : "Lorem ipsum dolor sit amet"
+            }
         },
         image5 : {
-            src:'img04.jpg'
+            src:'/assets/sliders/img04.jpg',
+            slides: {
+                p : "Lorem ipsum dolor sit amet"
+            }
         },
         image6 : {
-            src:'img05.jpg'
+            src:'/assets/sliders/img05.jpg',
+            slides: {
+                p : "Lorem ipsum dolor sit amet"
+            }
         }
         });
 })();

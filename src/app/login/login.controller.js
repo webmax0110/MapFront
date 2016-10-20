@@ -13,6 +13,9 @@
       Auth.logout();
       $state.go('login');
     }
+    if ($state.current.name == 'login' && Auth.isAuthenticated()) {
+      $state.go('home');
+    }
     vm.login = function(user) {
       Auth.login(user, function(data){
         if (data.message) {

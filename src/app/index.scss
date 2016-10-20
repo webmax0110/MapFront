@@ -44,6 +44,21 @@ body {
   #map {
     width : 100%;
   }
+
+  .bx-viewport {
+    height : 400px !important;
+    overflow: hidden;
+
+  }
+
+  .bx-wrapper {
+    height : 400px;
+    display: block;
+    
+    img {
+      width : 100%;
+    }
+  }
 }
 
 /**
