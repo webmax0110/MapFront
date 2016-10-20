@@ -11,10 +11,10 @@
   /** @ngInject */
   function MapController($state, $scope, Auth, NgMap, MapService) {
     var vm = this;
-    if (!Auth.isAuthenticated()) {
-      $state.go('login');
-      return;
-    }
+    // if (!Auth.isAuthenticated()) {
+    //   $state.go('login');
+    //   return;
+    // }
     vm.addlocation = function(location){
       MapService.post(location, function(data){
         vm.addresses.push(data);

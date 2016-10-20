@@ -10,9 +10,8 @@
     var vm = this;
     vm.login_error = false;
     if ($state.current.name == 'logout') {
-      Auth.logout().then(function(){
-        $state.go('login');
-      });
+      Auth.logout();
+      $state.go('login');
     }
     if (Auth.isAuthenticated()) {
       $state.go(Auth.defaultState());

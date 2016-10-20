@@ -42,13 +42,21 @@
       logout: function() {
         $cookies.remove('access_token');
         $cookies.remove('user_info');
-        return deferred.promise;
       },
 
       getRole: function(){
         if ($cookies.get('user_info')) {
           var currentUser = JSON.parse($cookies.get('user_info'));
-          return currentUser.role;
+          var role = 0;
+          switch(currentUser.role) {
+            case 'manager':
+              role = 1;
+              break;
+            case 'admin':
+              role = 2;
+              break;
+          }
+          return role;
         }
         else {
           return false;

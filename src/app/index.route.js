@@ -13,37 +13,46 @@
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        role: 0
       })
       .state('login', {
         url: '/login',
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        role: 0
       })
       .state('logout', {
         url: '/logout',
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        authenticate: true,
+        role: 1
       })
-      .state('map', {
-        url: '/map',
+      .state('address', {
+        url: '/address',
         templateUrl: 'app/map/map.html',
         controller: 'MapController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        role: 2
       })
       .state('about', {
         url: '/about',
         templateUrl: 'app/about/about.html',
         controller: 'AboutController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        authenticate: true,
+        role: 1
       })
       .state('profile', {
         url: '/profile',
         templateUrl: 'app/profile/profile.html',
         controller: 'ProfileController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        authenticate: true,
+        role: 1
       });
 
     $urlRouterProvider.otherwise('/');

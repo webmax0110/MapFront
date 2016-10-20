@@ -5,11 +5,11 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li ng-repeat="menu_item in vm.nav_menu" ng-class="{active: vm.isActive(menu_item.url)}" ng-show="(menu_item.access <= vm.access_level)"><a ng-href="#{{menu_item.url}}">{{menu_item.title}}</a></li>
+        <li ng-repeat="menu_item in vm.nav_menu" ng-class="{active: vm.isActive(menu_item.url)}" ng-show="(menu_item.access <= vm.access_level)"><a ui-sref="{{menu_item.state}}" ui-sref-active="active">{{menu_item.title}}</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a ng-href="#/login" ng-show="!vm.loggedin">Login</a></a></li>
-        <li><a ng-href="#/logout" ng-show="vm.loggedin">Logout</a></a></li>
+        <li><a ui-sref="login" ng-show="!vm.loggedin">Login</a></a></li>
+        <li><a ui-sref="logout" ng-show="vm.loggedin">Logout</a></a></li>
       </ul>
     </div>
   </div>

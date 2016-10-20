@@ -6,6 +6,10 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController() {
+  function MainController(mainSlider, srcBasePath) {
+  	var vm = this;
+  	vm.homeSlider = mainSlider;
+  	vm.image_path = srcBasePath + '/assets/sliders';
+
   }
 })();

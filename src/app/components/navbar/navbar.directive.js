@@ -34,15 +34,7 @@
       vm.loggedin = Auth.isAuthenticated();
       vm.nav_menu = nav_menu;
       vm.access_level = 0;
-      var current_role = Auth.getRole();
-      switch (current_role) {
-        case 'admin':
-          vm.access_level = 2;
-          break;
-        case 'manager':
-          vm.access_level = 1;
-          break;
-      }
+      vm.access_level = Auth.getRole();
     });
     
 
