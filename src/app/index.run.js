@@ -13,6 +13,11 @@
         event.preventDefault();
         return false;
       }
+      if (!next.authenticate && Auth.isAuthenticated()) {
+        $state.go('home');
+        event.preventDefault();
+        return false; 
+      }
       if (next.role > Auth.getRole())  {
         $state.go('home');
         event.preventDefault();

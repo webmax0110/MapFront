@@ -33,7 +33,6 @@
     }, function(newValue) {
       vm.loggedin = Auth.isAuthenticated();
       vm.nav_menu = nav_menu;
-      vm.access_level = 0;
       vm.access_level = Auth.getRole();
     });
     

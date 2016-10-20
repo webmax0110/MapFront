@@ -21,6 +21,7 @@
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
         controllerAs: 'vm',
+        authenticate: false,
         role: 0
       })
       .state('logout', {

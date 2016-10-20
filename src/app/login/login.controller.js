@@ -13,10 +13,6 @@
       Auth.logout();
       $state.go('login');
     }
-    if (Auth.isAuthenticated()) {
-      $state.go(Auth.defaultState());
-      return;
-    }
     vm.login = function(user) {
       Auth.login(user, function(data){
         if (data.message) {
