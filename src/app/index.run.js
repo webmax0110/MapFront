@@ -13,7 +13,6 @@
         event.preventDefault();
         return false;
       }
-      $log.log(Auth.getRole());
       if (next.role > Auth.getRole())  {
         $state.go('home');
         event.preventDefault();
