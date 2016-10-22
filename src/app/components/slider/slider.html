@@ -1,0 +1,13 @@
+<!-- <div id="homeSlider" class="slider-pro">
+	<div class="sp-slides" ng-repeat="slider in vm.homeslider">
+		<div class="sp-slide">
+			<img class="sp-image" ng-src="{{vm.path}}{{slider.src}}" data-src="{{vm.path}}{{slider.src}}" />
+		</div>
+		<div class="sp-slide" ng-repeat = "(tag,slide) in slider.slides">
+			<p>{{slide}}</p>
+		</div>
+	</div>
+</div> -->
+<ul class="bxslider">
+	<li ng-repeat="slider in vm.homeslider"><img ng-src="{{slider.src}}" /></li>
+</ul>
